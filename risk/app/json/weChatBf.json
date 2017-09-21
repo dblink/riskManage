@@ -1,0 +1,390 @@
+{
+    "weBankKey": {
+        "data": {
+            "accout": {
+                "data": {
+                    "idType": "证件类型",
+                    "idNo": "证件号前四位",
+                    "surName": "待确认姓名",
+                    "name": "姓名",
+                    "mobileNo": "手机后四位",
+                    "active": "是否有效",
+                    "isOverdue": "是否逾期",
+                    "isFirstLoan": "首次借贷",
+                    "cardNo": "微粒贷卡号",
+                    "totalAmount": "总额度",
+                    "availableAmount": "有效额度",
+                    "currPmtDueDate": "当前期最后还款日",
+                    "currBal": "当前期需还款额",
+                    "loanStatus": "借款状态",
+                    "custType": "微粒贷用户分群",
+                    "unpaidLoans": "未还清的借款数",
+                    "isActivated": "是否激活",
+                    "firstPurchaseDate": "首次贷款日",
+                    "overdueUnpay": "逾期未还金额",
+                    "overdueTerms": "逾期未还期数",
+                    "overdueDays": "逾期天数",
+                    "defaultBindSerial": "关联绑卡列表",
+                    "rateList": "借款利率列表"
+                },
+                "chinese": "微粒贷账户"
+            },
+            "bankCardList": {
+                "data": {
+                    "bankType": "银行类型",
+                    "bindSerial": "绑卡序列",
+                    "bankName": "银行名",
+                    "cardTail": "卡号后四位",
+                    "bankaccType": "卡类型"
+                },
+                "chinese": "微粒贷绑卡信息列表"
+            },
+            "loanRateList": {
+                "data": {
+                    "loanTerm": "借款期数",
+                    "interestRate": "利率",
+                    "penaltyRate": "罚息率"
+                },
+                "chinese": "微粒贷借款利率列表（风险低的人利率低）"
+            },
+            "loanRecordList": {
+                "data": {
+                    "loanReceiptNo": "借款号",
+                    "loanInitTerm": "借款期数",
+                    "loanInitPrin": "借款金额",
+                    "registerDate": "申请日期",
+                    "remainUnpayPrin": "剩余未还",
+                    "overDueFlag": "是否逾期",
+                    "payOffFlag": "是否还清",
+                    "loanBank": "借款银行",
+                    "debitCardNo": "卡后四位",
+                    "interestRate": "借款利率",
+                    "requestTime": "申请时间",
+                    "expireDate": "到期时间",
+                    "firstBillDate": "首账单日"
+                },
+                "chinese": "微粒贷借款记录"
+            },
+            "repayRecordList": {
+                "data": {
+                    "repayTime": "还款日期",
+                    "repayAmount": "还款金额",
+                    "payBank": "还款银行",
+                    "debitCardNo": "卡后四位",
+                    "pmtInd": "是否代扣"
+                },
+                "chinese": "微粒贷还贷记录"
+            }
+        },
+        "chinese": "微粒贷信息"
+    },
+    "weBankKeyList": {
+        "type": "json",
+        "value": {
+            "accout": {
+                "type": "json",
+                "value": {
+                    "idType": "证件类型",
+                    "idNo": "证件号前四位",
+                    "surName": "待确认姓名",
+                    "name": "姓名",
+                    "mobileNo": "手机后四位",
+                    "active": "是否有效",
+                    "isOverdue": "是否逾期",
+                    "isFirstLoan": "首次借贷",
+                    "cardNo": "微粒贷卡号",
+                    "totalAmount": "总额度",
+                    "availableAmount": "有效额度",
+                    "currPmtDueDate": "当前期最后还款日",
+                    "currBal": "当前期需还款额",
+                    "loanStatus": "借款状态",
+                    "custType": "微粒贷用户分群",
+                    "unpaidLoans": "未还清的借款数",
+                    "isActivated": "是否激活",
+                    "firstPurchaseDate": "首次贷款日",
+                    "overdueUnpay": "逾期未还金额",
+                    "overdueTerms": "逾期未还期数",
+                    "overdueDays": "逾期天数",
+                    "defaultBindSerial": "关联绑卡列表",
+                    "rateList": "借款利率列表"
+                },
+                "chinese": "微粒贷账户"
+            },
+            "bankCardList": {
+                "type": "map",
+                "value": {
+                    "bankType": "银行类型",
+                    "bindSerial": "绑卡序列",
+                    "bankName": "银行名",
+                    "cardTail": "卡号后四位",
+                    "bankaccType": "卡类型"
+                },
+                "chinese": "微粒贷绑卡信息列表"
+            },
+            "loanRateList": {
+                "type": "map",
+                "value": {
+                    "loanTerm": "借款期数",
+                    "interestRate": "利率",
+                    "penaltyRate": "罚息率"
+                },
+                "chinese": "微粒贷借款利率列表（风险低的人利率低）"
+            },
+            "loanRecordList": {
+                "type": "map",
+                "value": {
+                    "loanReceiptNo": "借款号",
+                    "loanInitTerm": "借款期数",
+                    "loanInitPrin": "借款金额",
+                    "registerDate": "申请日期",
+                    "remainUnpayPrin": "剩余未还",
+                    "overDueFlag": "是否逾期",
+                    "payOffFlag": "是否还清",
+                    "loanBank": "借款银行",
+                    "debitCardNo": "卡后四位",
+                    "interestRate": "借款利率",
+                    "requestTime": "申请时间",
+                    "expireDate": "到期时间",
+                    "firstBillDate": "首账单日"
+                },
+                "chinese": "微粒贷借款记录"
+            },
+            "repayRecordList": {
+                "type": "map",
+                "value": {
+                    "repayTime": "还款日期",
+                    "repayAmount": "还款金额",
+                    "payBank": "还款银行",
+                    "debitCardNo": "卡后四位",
+                    "pmtInd": "是否代扣"
+                },
+                "chinese": "微粒贷还贷记录"
+            }
+        },
+        "chinese": "微粒贷信息"
+    },
+    "weChatKey": {
+        "data": {
+            "baseInfo": {
+                "data": {
+                    "uin": "微信账户唯一标示",
+                    "nickName": "昵称",
+                    "remarkName": "备注名",
+                    "sex": "性别 0(未知)、 1(男)、 2（ 女）",
+                    "signature": "签名",
+                    "headImgPath": "图像图片url",
+                    "verifyFlag": "0(个人号)、 非0公众号(分类待定)"
+                },
+                "chinese": "基本信息"
+            },
+            "contactList": {
+                "data": {
+                    "uuId": "用户唯一id",
+                    "nickName": "昵称",
+                    "headImgPath": "头像图片路径",
+                    "remarkName": "备注名",
+                    "sex": "0 未知， 1 男， 2 女",
+                    "signature": "个人签名",
+                    "verifyFlag": "0(个人号)、 非0公众号(分类待定)",
+                    "starFriend": "星级好友， 1 是0不是",
+                    "attrStatus": "属性状态",
+                    "province": "省",
+                    "city": "市",
+                    "alias": "别名",
+                    "displayName": "展示名",
+                    "isGroup": "是否群组， 1 是0不是",
+                    "isOwner": "是否群主， 1 是0不是",
+                    "memberCount": "群组人数",
+                    "isCollection": "群组是否收藏， 1 是0不是",
+                    "recentContactTimes": "联系次数",
+                    "statues": "群组是否开启消息推送， 1 是0不是",
+                    "snsFlag": "是否有朋友圈相册",
+                    "intimacy": "亲密度， 越大表示关系越近， 有可能为负数",
+                    "isBlack": "是否加入黑名单， 1 是0不是",
+                    "isTopContact": "聊天知否置顶是， 1 是0否",
+                    "isMuted": "是否屏蔽消息， 1 是， 0 不是",
+                    "isContact": "是否联系人,1 是， 0 不是",
+                    "hasContacted": " 是否聊过天,1 是， 0 不是 ",
+                    "snsNotLookOther": "不看别人朋友圈,1 是， 0 不是 ",
+                    "snsOtherNotLook": "不让别人看朋友圈,1 是， 0 不是 ",
+                    "memberList": "群组成员列表"
+                },
+                "chinese": "联系人"
+            },
+            "subscribeMsgList": {
+                "data": {
+                    "nickName": "发布者昵称",
+                    "publishTime": "发布时间",
+                    "title": "标题",
+                    "digest": "文摘",
+                    "cover": "文章封面",
+                    "url": "文章链接"
+                },
+                "chinese": "订阅信息"
+            }
+        },
+        "chinese": "微信基本信息"
+    },
+    "weChatKeyList": {
+        "type": "json",
+        "value": {
+            "baseInfo": {
+                "type": "json",
+                "value": {
+                    "nickName": "昵称",
+                    "remarkName": "备注名",
+                    "sex": "性别",
+                    "signature": "签名",
+                    "headImgPath": "图像图片url",
+                    "verifyFlag": "类型"
+                },
+                "chinese": "基本信息"
+            },
+            "contactList": {
+                "type": "map",
+                "value": {
+                    "nickName": "昵称",
+                    "headImgPath": "头像图片路径",
+                    "remarkName": "备注名",
+                    "sex": "性别"
+                },
+                "chinese": "联系人"
+            }
+        },
+        "chinese": "微信基本信息"
+    },
+    "taobaoList": {
+        "type": "json",
+        "value": {
+            "ecommerceBaseInfo": {
+                "type": "json",
+                "value": {
+                    "alipayAccount": "支付宝账号",
+                    "taobaoAccount": "绑定的淘宝账号",
+                    "name": "支付宝处登记姓名",
+                    "email": "支付宝处登记邮箱",
+                    "mobile": "支付宝处登记手机",
+                    "alipayBalance": "支付宝余额",
+                    "yuebaoBalance": "余额宝余额",
+                    "alipayRegistrationDatetime": "支付宝注册时间",
+                    "isVerified": "是否实名认证",
+                    "huabeiAmount": "花呗额度",
+                    "huabeiBalance": "花呗余额",
+                    "creditLevelAsBuyer": "作为买家信用额度",
+                    "creditLevelAsSeller": "作为卖家信用额度",
+                    "identityCard": "支付宝处登记身份证号",
+                    "jiebeiAmount": "借呗额度",
+                    "jiebeiBalance": "借呗余额"
+                },
+                "chinese": "用户基本信息"
+            },
+            "ecommerceTrades": {
+                "type": "map",
+                "value": {
+                    "title": "购物标题",
+                    "amount": "金额",
+                    "tradeNo": "交易号",
+                    "tradeTime": "交易时间",
+                    "tradeStatusName": "交易状态",
+                    "txTypeName": "交易类型",
+                    "behaviorLableName": "行为标签",
+                    "tradeDetailUrl": "交易详情URL",
+                    "otherSide": "交易对方",
+                    "otherSideAccount": "交易对方账号",
+                    "otherSideName": "交易对方姓名"
+                },
+                "chinese": "交易记录"
+            },
+            "ecommerceConsigneeAddresses": {
+                "type": "map",
+                "value": {
+                    "receiveName": "收货人",
+                    "postCode": "收货地址邮政编码",
+                    "address": "地址",
+                    "region": "收货地址所在区域",
+                    "telNumber": "电话",
+                    "tradeTime": "真实收货地址对应的最近交易时间",
+                    "tradeNo": "真实收货地址对应的最近交易号"
+                },
+                "chinese": "收货地址"
+            },
+            "ecommerceBindedBankCards": {
+                "type": "map",
+                "value": {
+                    "bankName": "银行名称",
+                    "cardNo": "卡号后4位",
+                    "cardType": "类型",
+                    "cardOwnerName": "银行卡持卡人姓名",
+                    "isExpress": "是否开通快捷支付"
+                },
+                "chinese": "绑卡信息"
+            },
+            "ecommercePaymentAccounts": {
+                "type": "map",
+                "value": {
+                    "category": "缴费项目，（ 电费）",
+                    "city": "地区",
+                    "organization": "收款单位",
+                    "accountName": "户名",
+                    "accountCode": "缴费号码"
+                },
+                "chinese": "水电煤缴费账户"
+            },
+            "taobaoOrders": {
+                "type": "map",
+                "value": {
+                    "tradeNumber": "支付交易号",
+                    "orderNumber": "订单号",
+                    "tradeStatusName": "交易状态",
+                    "tradeTypeName": "交易类型",
+                    "createTime": "创建时间",
+                    "endTime": "订单完成",
+                    "totalQuantity": "商品总数量",
+                    "postFees": "邮费",
+                    "actualFee": "实付金额",
+                    "seller": {
+                        "type": "json",
+                        "value": {
+                            "shopId": "淘宝卖家id",
+                            "shopName": "店铺名称",
+                            "nick": "店铺昵称",
+                            "url": "店铺链接",
+                            "pic": "店铺头像"
+                        },
+                        "chinese": "卖家信息"
+                    },
+                    "logistics": {
+                        "type": "json",
+                        "value": {
+                            "companyCode": "物流公司编码",
+                            "companyName": "物流公司名",
+                            "mailNo": "物流号",
+                            "createTime": "创建时间",
+                            "lastTime": "最新物流时间",
+                            "lastMsg": "最新物流信息",
+                            "postManName": "派件员",
+                            "postManPhone": "派件员手机号",
+                            "postManSiteName": "派件人所在网点"
+                        },
+                        "chinese": "物流公司"
+                    },
+                    "subOrders": {
+                        "type": "map",
+                        "value": {
+                            "itemTitle": "商品名称",
+                            "itemId": "商品id",
+                            "quantity": "购买数量",
+                            "original": "原价",
+                            "actual": "实际金额",
+                            "itemPic": "商品图片",
+                            "itemUrl": "商品链接"
+                        },
+                        "chinese": "子订单"
+                    }
+                },
+                "chinese": "订单列表"
+            }
+        },
+        "chinese": "电商信息"
+    }
+}

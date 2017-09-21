@@ -1,0 +1,427 @@
+{
+    "user_basic": [{
+            "key": "name",
+            "value": "string"
+        },
+        {
+            "key": "id_card",
+            "value": "string"
+        },
+        {
+            "key": "gender",
+            "value": "string"
+        },
+        {
+            "key": "age",
+            "value": "string"
+        },
+        {
+            "key": "constellation",
+            "value": "string"
+        },
+        {
+            "key": "province",
+            "value": "string"
+        },
+        {
+            "key": "city",
+            "value": "string"
+        },
+        {
+            "key": "region",
+            "value": "string"
+        },
+        {
+            "key": "native_place",
+            "value": "string"
+        }
+    ],
+    "cell_phone": [{
+            "key": "mobile",
+            "value": "string"
+        },
+        {
+            "key": "carrier_name",
+            "value": "string"
+        },
+        {
+            "key": "carrier_idcard",
+            "value": "string"
+        },
+        {
+            "key": "reg_time",
+            "value": "string"
+        },
+        {
+            "key": "in_time",
+            "value": "string"
+        },
+        {
+            "key": "email",
+            "value": "string"
+        },
+        {
+            "key": "address",
+            "value": "string"
+        },
+        {
+            "key": "reliability",
+            "value": "string"
+        },
+        {
+            "key": "phone_attribution",
+            "value": "string"
+        },
+        {
+            "key": "live_address",
+            "value": "string"
+        },
+        {
+            "key": "available_balance",
+            "value": "string"
+        },
+        {
+            "key": "bill_certification_day",
+            "value": "string"
+        }
+    ],
+    "basic_check_items": [{
+        "result": "string",
+        "comment": "string",
+        "check_item": "string"
+    }],
+    "application_check": [{
+        "app_point": "string",
+        "check_points": {
+            "relationship": "string",
+            "key_value": "string",
+            "contact_name": "string",
+            "check_mobile": "string",
+            "check_xiaohao": "string"
+        }
+    },
+    {
+        "app_point": "string",
+        "check_points": {
+            "relationship": "string",
+            "key_value": "string",
+            "contact_name": "string",
+            "check_mobile": "string",
+            "check_xiaohao": "string"
+        }
+    }
+    ],
+    "behavior_check": [{
+        "result": "string",
+        "evidence": "string",
+        "score": "int",
+        "check_point": "string",
+        "check_point_cn": "string"
+    }],
+    "friend_circle": {
+        "summary": [{
+            "key": "string",
+            "value": "value"
+        }],
+        "peer_num_top_list": [{
+            "key": "string",
+            "top_item": [{
+                "peer_number": "string",
+                "peer_num_loc": "string",
+                "group_name": "string",
+                "company_name": "string",
+                "call_cnt": "long",
+                "call_time": "long",
+                "dial_cnt": "long",
+                "dialed_cnt": "long",
+                "dial_time": "long",
+                "dialed_time": "long"
+            }]
+        }],
+        "location_top_list": [{
+            "key": "string",
+            "top_item": [{
+                "location": "string",
+                "peer_number_cnt": "long",
+                "call_cnt": "long",
+                "call_time": "long",
+                "dial_cnt": "long",
+                "dialed_cnt":"long",
+                "dial_time": "long",
+                "dialed_time": "long"
+            }]
+        }]
+    },
+    "cell_behavior": [{
+        "behavior": [{
+            "sms_cnt": "long",
+            "cell_phone_num": "string",
+            "net_flow": "long",
+            "total_amount": "long",
+            "cell_mth": "string",
+            "cell_loc": "string",
+            "cell_operator_zh": "string",
+            "cell_operator": "string",
+            "call_cnt": "long",
+            "call_time": "long",
+            "dial_cnt": "long",
+            "dial_time": "long",
+            "dialed_cnt": "long",
+            "dialed_time": "long",
+            "rechange_cnt": "long",
+            "rechange_amount": "long"
+        }],
+        "phone_num": "string"
+    }],
+    "call_contact_detail": [{
+        "city": "string",
+        "p_relation": "string",
+        "peer_num": "string",
+        "group_name": "string",
+        "company_name": "string",
+        "call_cnt_1w": "long",
+        "call_cnt_1m": "long",
+        "call_cnt_3m": "long",
+        "call_cnt_6m": "long",
+        "call_time_3m": "long",
+        "call_time_6m": "long",
+        "dial_cnt_3m": "long",
+        "dial_cnt_6m": "long",
+        "dial_time_3m": "long",
+        "dial_time_6m": "long",
+        "dialed_cnt_3m": "long",
+        "dialed_cnt_6m": "long",
+        "dialed_time_3m": "long",
+        "dialed_time_6m": "long",
+        "call_cnt_morning_3m": "long",
+        "call_cnt_morning_6m": "long",
+        "call_cnt_noon_3m": "long",
+        "call_cnt_noon_6m": "long",
+        "call_cnt_afternoon_3m": "long",
+        "call_cnt_afternoon_6m": "long",
+        "call_cnt_evening_3m": "long",
+        "call_cnt_evening_6m": "long",
+        "call_cnt_night_3m": "long",
+        "call_cnt_night_6m": "long",
+        "call_cnt_weekday_3m": "long",
+        "call_cnt_weekday_6m": "long",
+        "call_cnt_weekend_3m": "long",
+        "call_cnt_weekend_6m": "long",
+        "call_cnt_holiday_3m": "long",
+        "call_cnt_holiday_6m": "long",
+        "call_if_whole_day_3m": "boolean",
+        "call_if_whole_day_6m": "boolean",
+        "trans_start": "string",
+        "trans_end": "string"
+    }],
+    "sms_contact_detail": [{
+        "peer_num": "string",
+        "sms_cnt_1w": "long",
+        "sms_cnt_1m": "long",
+        "sms_cnt_3m": "long",
+        "sms_cnt_6m": "long",
+        "send_cnt_3m": "long",
+        "send_cnt_6m": "long",
+        "receive_cnt_3m": "long",
+        "receive_cnt_6m": "long"
+    }],
+    "contact_region": [{
+        "key": "string",
+        "desc": "string",
+        "region_list": [{
+            "region_loc": "string",
+            "region_uniq_num_cnt": "long",
+            "region_call_cnt": "long",
+            "region_call_time": "long",
+            "region_dial_cnt": "long",
+            "region_dial_time": "long",
+            "region_dialed_cnt": "long",
+            "region_dialed_time": "long",
+            "region_avg_dial_time": "long",
+            "region_avg_dialed_time": "long",
+            "region_dial_cnt_pct": "double",
+            "region_dial_time_pct": "double",
+            "region_dialed_cnt_pct": "double",
+            "region_dialed_time_pct": "double"
+        }]
+    }],
+    "call_risk_analysis": [{
+        "risk_item": "string",
+        "risk_point": {
+            "call_cnt_1m": "long",
+            "call_cnt_3m": "long",
+            "call_cnt_6m": "long",
+            "avg_call_cnt_3m": "double",
+            "avg_call_cnt_6m": "double",
+            "call_time_1m": "long",
+            "call_time_3m": "long",
+            "call_time_6m": "long",
+            "avg_call_time_3m": "double",
+            "avg_call_time_6m": "double"
+        }
+    }],
+    "main_service": [{
+        "service_num": "string",
+        "group_name": "string",
+        "company_name": "string",
+        "total_service_cnt": "long",
+        "service_details": [{
+            "interact_mth": "string",
+            "interact_cnt": "long",
+            "interact_time": "long",
+            "dial_cnt": "long",
+            "dialed_cnt": "long",
+            "dial_time": "long",
+            "dialed_time": "long"
+        }]
+    }],
+    "call_service_analysis": [{
+        "analysis_item": "string",
+        "analysis_desc": "string",
+        "analysis_point": {
+            "call_cnt_1m": "long",
+            "call_cnt_3m": "long",
+            "call_cnt_6m": "long",
+            "avg_call_cnt_3m": "double",
+            "avg_call_cnt_6m": "double",
+            "call_time_1m": "long",
+            "call_time_3m": "long",
+            "call_time_6m": "long",
+            "avg_call_time_3m": "long",
+            "avg_call_time_6m": "long"
+        }
+    }],
+    "active_degree": [{
+        "app_point": "string",
+        "app_point_zh": "string",
+        "item": {
+            "item_1m": "string",
+            "item_3m": "string",
+            "item_6m": "string",
+            "avg_item_3m": "string",
+            "avg_item_6m": "string"
+        }
+    }],
+    "consumption_detail": [{
+        "app_point": "string",
+        "app_point_zh": "string",
+        "item": {
+            "item_1m": "string",
+            "item_3m": "string",
+            "item_6m": "string",
+            "avg_item_3m": "string",
+            "avg_item_6m": "string"
+        }
+    }],
+    "call_time_detail": [{
+        "app_point": "string",
+        "app_point_zh": "string",
+        "item": {
+            "item_1m": "string",
+            "item_3m": "string",
+            "item_6m": "string",
+            "avg_item_3m": "string",
+            "avg_item_6m": "string"
+        }
+    }],
+    "call_family_detail": [{
+        "app_point": "string",
+        "app_point_zh": "string",
+        "item": {
+            "item_1m": "string",
+            "item_3m": "string",
+            "item_6m": "string",
+            "avg_item_3m": "string",
+            "avg_item_6m": "string"
+        }
+    }],
+    "call_duration_detail": [{
+        "key": "string",
+        "desc": "string",
+        "duration_list": [{
+            "time_step": "string",
+            "time_step_zh": "string",
+            "item": {
+                "total_cnt": "long",
+                "uniq_num_cnt": "long",
+                "total_time": "long",
+                "dial_cnt": "long",
+                "dialed_cnt": "long",
+                "dial_time": "long",
+                "dialed_time": "long",
+                "latest_call_time": "string",
+                "farthest_call_time": "string"
+            }
+        }]
+    }],
+    "roam_analysis": [{
+        "roam_location": "string",
+        "roam_day_cnt_3m": "long",
+        "roam_day_cnt_6m": "long",
+        "continue_roam_cnt_3m": "long",
+        "continue_roam_cnt_6m": "long",
+        "max_roam_day_cnt_3m": "long",
+        "max_roam_day_cnt_6m": "long"
+    }],
+    "roam_detail": [{
+        "roam_day": "string",
+        "roam_location": "string"
+    }],
+    "collection_contact": [{
+        "phone_num": "string",
+        "contact_name": "string",
+        "relationship": "string",
+        "phone_num_loc": "string",
+        "call_cnt": "long",
+        "call_time": "long",
+        "dial_cnt": "long",
+        "dial_time": "long",
+        "dialed_cnt": "long",
+        "dialed_time": "long",
+        "trans_start": "string",
+        "trans_end": "string",
+        "sms_cnt": "long"
+    }],
+    "user_info_check": {
+        "check_search_info": {
+            "searched_org_cnt": "long",
+            "searched_org_type": [
+                "string"
+            ],
+            "idcard_with_other_names": [
+                "string"
+            ],
+            "idcard_with_other_phones": [
+                "string"
+            ],
+            "phone_with_other_names": [
+                "string"
+            ],
+            "phone_with_other_idcards": [
+                "string"
+            ],
+            "register_org_cnt": "long",
+            "register_org_type": [
+                "string"
+            ],
+            "arised_open_web": [
+                "string"
+            ]
+        },
+        "check_black_info": {
+            "phone_gray_score": "long",
+            "contacts_class1_blacklist_cnt": "long",
+            "contacts_class2_blacklist_cnt": "long",
+            "contacts_class1_cnt": "long",
+            "contacts_router_cnt": "long",
+            "contacts_router_ratio": "double"
+        }
+    },
+    "trip_info": [{
+        "trip_dest": "string",
+        "trip_start_time": "string",
+        "trip_end_time": "string",
+        "trip_leave": "string",
+        "trip_type": "string"
+    }]
+}

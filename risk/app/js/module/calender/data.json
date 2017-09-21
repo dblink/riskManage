@@ -1,0 +1,25 @@
+{
+    "indexParameter": [{
+            "parameter": "pendingRepaymentTime",
+            "text": "未还款",
+            "color": "info",
+            "code": 0
+        },
+        {
+            "parameter": "overdueTime",
+            "text": "逾期",
+            "color": "wrong",
+            "code": 2
+        },
+        {
+            "parameter": "repaymentTime",
+            "text": "已还款",
+            "color": "success",
+            "code": 1
+        }
+    ],
+    "indexDefault": {
+        "text": "今日无数据",
+        "color": "warming"
+    }
+}

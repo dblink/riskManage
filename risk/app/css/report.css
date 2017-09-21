@@ -1,0 +1,62 @@
+.report-title{
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+}
+.report-nav{
+    height: 40px;
+    line-height: 40px;
+    background: #eeeeee;
+    padding-right: 10px;
+    color: #666666;
+}
+.report-content{
+    /*height: 40px;*/
+    line-height: 40px;
+    color: #444444;
+    vertical-align: top;
+    padding-left: 15px;
+}
+.report-tip{
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    color: #ffffff;
+    padding: 0 5px;
+    margin-left: 10px;
+    /* border-radius: 5px; */
+}
+.report-little_tip{
+    font-size: 14px;
+    /*height: 20px;*/
+    line-height: 28px;
+}
+.nav1{
+    height: 40px;
+    line-height: 40px;
+    /* background: #f6f6f6; */
+    padding-right: 20px;
+    color: #666666;
+    text-indent: 20px;
+    /*border-right: 1px solid #cccccc;*/
+}
+.content1{
+    /*height: 40px;*/
+    /* border-left: 1px solid #f2f2f2; */
+    line-height: 40px;
+    color: #666666;
+    vertical-align: top;
+    text-align: center;
+    /* padding-left: 15px; */
+    /*float:right;*/
+    width: 100%;
+}
+
+.nav_all{
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+/* .report-user-mssage .container:nth-child(2n){
+    background: #f9f9f9;
+} */

@@ -1,0 +1,132 @@
+{
+    "loanState": [
+        "待放款",
+        "待还款",
+        "逾期",
+        "正常还款",
+        "催款结清",
+        "亲人垫付",
+        "已拒绝"
+    ],
+    "loanStateItem": [{
+            "value": "-1",
+            "primaryText": "所有状态"
+        },
+        {
+            "value": "0",
+            "primaryText": "待放款"
+        }, {
+            "value": "1",
+            "primaryText": "待还款"
+        }, {
+            "value": "2",
+            "primaryText": "逾期"
+        }, {
+            "value": "3",
+            "primaryText": "正常还款"
+        }, {
+            "value": "4",
+            "primaryText": "催款结清"
+        }, {
+            "value": "5",
+            "primaryText": "亲人垫付"
+        }, {
+            "value": "6",
+            "primaryText": "已拒绝"
+        }
+    ],
+    "TradingState": [{
+            "value": "-1",
+            "primaryText": "所有状态"
+        },
+        {
+            "value": "0",
+            "primaryText": "放款"
+        },
+        {
+            "value": "1",
+            "primaryText": "已还款"
+        }, {
+            "value": "2",
+            "primaryText": "逾期"
+        }, {
+            "value": "4",
+            "primaryText": "催款结清"
+        }, {
+            "value": "6",
+            "primaryText": "正常结清"
+        }, {
+            "value": "7",
+            "primaryText": "划扣"
+        }, {
+            "value": "8",
+            "primaryText": "开销"
+        }, {
+            "value": "10",
+            "primaryText": "上门费"
+        },{
+            "value": "11",
+            "primaryText": "总入账"
+        }
+    ],
+    "applicationState": [{
+        "value": "-1",
+        "primaryText": "所有状态"
+    }, {
+        "value": "0",
+        "primaryText": "待提交"
+    }, {
+        "value": "1",
+        "primaryText": "申请中"
+    }, {
+        "value": "2",
+        "primaryText": "拒绝"
+    }, {
+        "value": "3",
+        "primaryText": "待生成"
+    }, {
+        "value": "4",
+        "primaryText": "已生成合同"
+    }],
+    "repaymentState": [{
+        "value": "-1",
+        "primaryText": "所有状态"
+    }, {
+        "value": "0",
+        "primaryText": "待还款"
+    }, {
+        "value": "1",
+        "primaryText": "已还款"
+    }, {
+        "value": "2",
+        "primaryText": "逾期"
+    }, {
+        "value": "3",
+        "primaryText": "划扣失败"
+    },{
+        "value": "4",
+        "primaryText": "欺诈"
+    }],
+    "settleState": [{
+            "value": "3",
+            "primaryText": "正常还款"
+        },{
+            "value": "4",
+            "primaryText": "催款结清"
+        },{
+            "value": "5",
+            "primaryText": "亲人垫付"
+        }
+    ],
+    "relationShip": [
+        "父亲",
+        "母亲",
+        "配偶",
+        "同事",
+        "子女",
+        "朋友",
+        "其他",
+        "兄弟",
+        "姐妹"
+    ]
+}

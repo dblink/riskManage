@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 100px;
+            vertical-align: top;
+            /* text-align: center; */
+            text-indent: 24px;
+        }
+
+        .block-2 {
+            float: left;
+            width: 50%;
+        }
+        .loading{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top:0;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 1024px; margin:auto;">
+        <div>用户基本信息检测</div>
+        <div>
+            <div class="nav">姓名：</div> 范波
+        </div>
+        <div style="overflow: hidden;">
+            <div class="block-2">
+                <div class="nav">身份证：</div> 305111111111111 <span class="tip">不在法院名单</span><span class="tip">不在金融机构黑名单</span>
+            </div>
+            <div class="block-2">
+                男|31|安徽省 芜湖市 新抚区
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="block-2">
+                <div class="nav">手机号</div>
+                <div style="display:inline-block;">
+                    112312312313 <span class="tip">不在金融机构黑名单</span>
+                    <div>
+                        <p>用户姓名与运营商提供的姓名[范波]匹配成功</p>
+                    </div>
+                </div>
+            </div>
+            <div class="block-2">
+                安徽移动 | <span class="success-tip">实名认证</span>
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="block-2">
+                <div class="nav">居住地址</div>
+                123123123123
+            </div>
+        </div>
+        <div style="overflow: hidden;">
+            <div class="nav">联系人</div>
+            <div style="display:inline-block">
+                父母 | 徐姐 | 1123123412412
+                <p>有该联系人电话的通话记录，[179]天内联系[253]次[451.02]分钟，按时长计算排名第[1]位 </p>
+                <p> 最早联系时间[2017-03-01 18:30:32]， 最晚联系时间[2017-08-27 17:58:22]</p>
+            </div>
+        </div>
+        <div>用户通话记录检测</div>
+        <div > 
+            <div class="nav">信用卡</div><div style="width: 462px;display:inline-block;">偶尔通话</div><div style="width: 462px;display:inline-block;">1次</div>
+            <div class="nav">110</div><div style="width: 462px;display:inline-block;">偶尔通话</div><div style="width: 462px;display:inline-block;">1次</div>
+            <div class="nav">120</div><div style="width: 462px;display:inline-block;">偶尔通话</div><div style="width: 462px;display:inline-block;">1次</div>
+            <div class="nav">小额贷</div>
+        </div>
+    </div>
+    <a onclick="tip()">123</a>
+    <div class="loading hidden">
+        <div>123</div>
+    </div>
+    <script>
+        
+        function tip(){
+            //$(".loading").removeClass("hidden");
+            
+            $(body).css({"overflow":"hidden"});
+            //request();
+        }
+        function request(){
+            $.ajax({
+                url:"地址",
+                success: function(e){
+                    $(".loading").addClass("hidden");
+                    $(body).css({"overflow":"auto"});
+                    window.open(e)
+                },
+                error: function(e){
+                    alert("出现错误");
+                    $(".loading").addClass("hidden");
+                    $(body).css({"overflow":"auto"});
+                }
+            })
+        }
+        
+    </script>
+</body>
+
+</html>

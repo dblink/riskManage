@@ -1,0 +1,178 @@
+.no-scroll-contain{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+.form{
+    z-index: 2;
+    width: 20rem;
+    margin: auto;
+}
+.form .container{
+    position: relative;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: auto;
+    width: 20rem;
+    padding: 18px 0;
+}
+.form .row .inputGroup,
+.form .selectGroup{
+    height: 100%;
+    display: inline;
+}
+.form .selectGroup select{
+    height: 100%;
+}
+.form .vcode{
+    height: 2rem;
+    margin-left: 1%;
+}
+
+.form .close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 .5rem;
+}
+.form .close:hover{
+    cursor: pointer;
+    background: #eee;
+ }
+
+ .login-image{
+        background: url("../img/login_pc.jpg") center center no-repeat;
+        background-size: 100% auto;
+    }
+/*new useful*/
+.form .error{
+    font-size: .9rem;
+    position: relative;
+    padding: 0 10%;
+    color: #333;
+    overflow: hidden;
+    transition: .5s;
+    height: 0px;
+}
+.form .error.hidden{
+    height: 0px;
+}
+/* .form .error.hide{
+    height: 0;
+    line-height: 2rem;
+} */
+.form .error.show{
+    height: 2rem;
+    line-height: 2rem;
+}
+.form *{
+    font-size: .9rem;
+}
+.form input,
+.form select{
+    border: none;
+}
+.form .row{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: .5rem 0;
+    width: 90%;
+    margin: auto;
+}
+.form .row i{
+    font-style: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+.form .input{
+    height: 100%;
+    vertical-align: top;
+    padding: 0 .3rem;
+}
+.form .vcode-image{
+    display: inline-block;
+    height: 100%;
+}
+/*end*/
+/*userful*/
+.login-input{
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 10px;
+}
+.login-input::-webkit-input-placeholder{
+    color: #fff;
+}
+.login-input:-moz-placeholder{
+    color: #fff;
+}
+.login-input:-ms-input-placeholder{
+    color: #fff;
+}
+.login-input::-moz-placeholder{
+    color:#fff;
+}
+.login-submit{
+    padding: 10px;
+    background: url("/img/login_bottom.png") no-repeat center center ;
+    background-size: 100% auto;
+    color:#fff;
+}
+.login{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+/*end*/
+.form .vcode{
+    vertical-align: top;
+}
+.form .tip{
+    width: 90%;
+    margin:.5rem auto;
+    text-align: right;
+}
+.form .button-send{
+    border:1px solid #DDBE91;
+    transition: .3s background;
+}
+.form .button-send:hover{
+    background: #DDBE91;
+    color: #fff;
+}
+.form .sureQuit{
+    height: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    font-size: .9rem;
+}
+.form .chose input{
+    border: none;
+    width: 50%;
+    height: 2rem;
+}
+.form .chose input:hover{
+    cursor: pointer;
+    background: #ededed;
+}
+.nowPeople{
+    text-align: right;
+    width: 90%;
+    margin: .5rem auto;
+}
+.form .text-area{
+    width: 90%;
+    margin: .5rem auto;
+}
+.form .text-area textarea{
+    height: 4em;
+    width: 80%;
+    resize: none;
+    background: #f1f1f1;
+    border: none;
+}

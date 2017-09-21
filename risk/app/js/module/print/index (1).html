@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #imagelist img {
+        width: 464px;
+    }
+</style>
+
+<body>
+    <div id="view">
+        <label for="test">123</label>
+        <form id="form">
+            <input onchange="loadimage(this)" id="test" accept="image/png, image/jpeg, image/gif, image/jpg" type="file" multiple="multiple"
+                size="1" />
+            <input type="submit" />
+        </form>
+        <!-- <img src="image/xieyi5.jpg" /> -->
+        <!-- />-->
+        <canvas id="canvas" width="596" height="842"></canvas>
+        <div id="imagelist">
+        </div>
+    </div>
+    <!-- <script src="js/min/jquery-1.10.1.min.js"></script> -->
+    <!--<script src="js/bundle.js" ></script>-->
+    <script>
+        (function () {
+            var _file;
+            var _canvas = document.getElementById("canvas")
+            var _context = _canvas.getContext("2d");
+            var img = new Image();
+            var drawList = {};
+
+            drawList = {
+                
+            }
+
+            function split(value) {
+                var dotq = value.split(".")[0];
+                var dotqLength = dotq.length;
+                var doth = value.split(".")[1];
+                var dothLength = doth.length;
+                var bigWrite = "壹.贰.叁.肆.伍.陆.柒.捌.玖".split(".");
+                var unit = "分.角.圆.拾.佰.仟.万".split(".");
+                var valueArray;
+                var puter = 6 - dotqLength;
+                var valueBig = "";
+                var dothput = 2 - dothLength;
+
+                var number = '';
+                for (var i = 0; i < puter; i++) {
+                    number += '0';
+                }
+                dotq = number + dotq;
+
+                number = '';
+                for (var i = 0; i < dothput; i++) {
+                    number += '';
+                }
+                doth = number + doth;
+                valueArray = (dotq + doth).split("");
+
+                valueArray.map((e, key) => {
+                    if (e === "0") {
+                        valueBig += key === 1 && valueArray[0] !== "0" && "万零" || key === 5 && "零圆" || "零";
+                    } else {
+                        switch (key) {
+                            case 0:
+                                {
+                                    valueBig += bigWrite[e - 1] + unit[3];
+                                    break;
+                                }
+                            default:
+                                {
+                                    valueBig += bigWrite[e - 1] + unit[7 - key];
+                                }
+                        }
+                    }
+
+                })
+                valueBig = valueBig.replace(/^零{1,}|零{1,}$/g, "");
+                valueBig = valueBig.replace(/零{2,}/g, "零");
+                valueBig = valueBig.replace(/零{1}圆/, "圆");
+                valueBig = valueBig[valueBig.length - 1] === "圆" && valueBig + "整" || valueBig;
+
+                return {
+                    array: valueArray,
+                    big: valueBig
+                }
+            }
+
+            function setting(name, x, y, size = 16) {
+                return {
+                    name: name,
+                    x: x,
+                    y: y,
+                    size: size
+                }
+            }
+
+            var width = _canvas.clientWidth;
+            var height = _canvas.clientHeight
+
+            img.src = "image/xieyi5.jpg";
+            img.onload = function () {
+                _context.drawImage(img, 0, 0, width, height);
+                _context.fillStyle = "#000";
+                _context.font = "16px 宋体";
+
+                Object.keys(drawList).map((e) => {
+                    if (drawList[e].type === "map") {
+                        drawList[e].value.map((sub, key)=>{
+                            let marginX = key * 30;
+                            _context.fillText(sub, drawList[e].first.x + marginX , drawList[e].first.y);
+                        })
+                    } else {
+                        _context.fillText(drawList[e].name, drawList[e].x, drawList[e].y)
+                    }
+
+                })
+
+
+                var image = new Image();
+                image.src = _canvas.toDataURL("image/png", 1.0);
+                var dataURL = _canvas.toDataURL("image/png");
+                /*var src= window.URL.createObjectURL(_canvas.toDataURL("image/png"));
+                console.log(src);*/
+                document.getElementById("imagelist").appendChild(image);
+                _file = toBlob(dataURL, "png");
+                _file.name = "xieyi";
+            }
+            document.getElementById("form").addEventListener("submit", function (e) {
+                action(e);
+            })
+            document.getElementById("canvas").addEventListener("click", function (e) {
+                console.log(e.layerX, e.layerY);
+            })
+
+            function action(e) {
+                e.preventDefault();
+                var _form = new FormData();
+                _form.append("files", _file);
+                $.ajax({
+                    url: "localhost/workSpace/view/",
+                    type: "POST",
+                    data: _form,
+                })
+            }
+
+            function toBlob(urlData, type) {
+                var _base64 = urlData.replace(/.*,/, '');
+                var bytes = window.atob(_base64);
+                var ab = new ArrayBuffer(bytes.length);
+                console.log(bytes.length);
+                var ia = new Uint8Array(ab);
+                for (var i = 0; i < bytes.length; i++) {
+                    ia[i] = bytes.charCodeAt(i);
+                }
+                return new Blob([ab], {
+                    type: 'image/' + type
+                });
+            }
+        })()
+
+        function loadimage(file) {
+            var files = file.files;
+            document.getElementById("imagelist").innerHTML = "";
+            Object.keys(files).map((sub) => {
+                console.log(files[sub].size / 1000);
+                if (files[sub].size / 1000 > 500) {
+                    alert("图片过大!")
+                    return;
+                }
+                var Img = new Image();
+                Img.src = window.URL.createObjectURL(files[sub]);
+                document.getElementById("imagelist").appendChild(Img);
+
+            })
+        }
+    </script>
+</body>
+
+</html>
