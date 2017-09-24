@@ -1,5 +1,5 @@
 {
-  "name": "webServer",
+  "name": "risk",
   "version": "1.1.2",
   "description": "mytest",
   "main": "http.js",
@@ -9,18 +9,18 @@
     "build-dev": "webpack --progress --colors",
     "build-watch": "webpack --progress --colors --watch"
   },
-  "author": "",
+  "author": "lzy",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.7.2",
-    "babel-core": "^6.21.0",
+    "babel-core": "^6.26.0",
     "babel-loader": "^6.2.10",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
+    "file-loader": "^0.11.2",
     "json-loader": "^0.5.4",
-    "mysql": "^2.13.0",
     "postcss-loader": "^1.2.2",
     "react-transform-hmr": "^1.0.4",
     "style-loader": "^0.13.1",
@@ -34,6 +34,18 @@
     "material-ui": "^0.18.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router": "^2.8.1",
     "react-tap-event-plugin": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dblink/riskManage.git"
+  },
+  "keywords": [
+    "management"
+  ],
+  "bugs": {
+    "url": "https://github.com/dblink/riskManage/issues"
+  },
+  "homepage": "https://github.com/dblink/riskManage#readme"
 }
