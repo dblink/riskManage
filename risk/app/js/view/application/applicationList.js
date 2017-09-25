@@ -57,7 +57,8 @@ class ApplicationList extends Component {
         let _title= this.state.title;
         _title.Mobile = inter.getApplicationList.data.mobile;
         _title.Name = inter.getApplicationList.data.name;
-        _title.Company = inter.getCompany.callback[parseInt(inter.getApplicationList.data.company)+1].primaryText;
+        //_title.Company = inter.getCompany.callback[parseInt(inter.getApplicationList.data.company)+1].primaryText;
+        _title.Company = companyText(inter.getApplicationList.data.company);
         _title.State =  option.applicationState[parseInt(inter.getApplicationList.data.state) + 1].primaryText; 
         
         this.setState({
@@ -76,6 +77,18 @@ class ApplicationList extends Component {
     }
     getCompanyList(){
         getCompany(this.getList);
+    }
+    companyText(index){
+        let _list = inter.getCompany.callback;
+        let _length = _list.length;
+        let _text = "";
+        for(let i=0;i<_length;i++){
+            if(_list[i].value.toString() === index.toString()){
+                _text = _list[i].primaryText;
+                break;
+            }
+        }
+        return _text;
     }
     
     getList(){
