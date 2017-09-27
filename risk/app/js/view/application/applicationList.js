@@ -58,7 +58,7 @@ class ApplicationList extends Component {
         _title.Mobile = inter.getApplicationList.data.mobile;
         _title.Name = inter.getApplicationList.data.name;
         //_title.Company = inter.getCompany.callback[parseInt(inter.getApplicationList.data.company)+1].primaryText;
-        _title.Company = companyText(inter.getApplicationList.data.company);
+        _title.Company = this.companyText(inter.getApplicationList.data.company);
         _title.State =  option.applicationState[parseInt(inter.getApplicationList.data.state) + 1].primaryText; 
         
         this.setState({
