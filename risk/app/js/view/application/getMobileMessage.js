@@ -242,10 +242,10 @@ class GetMobileMessage extends Component {
     }
 
     getCode(){ //发送验证码
-        // if(!this.state.input.state){
-        //     alert("正在提交中，请勿操作！");
-        //     return;
-        // }
+        if(!this.state.input.state){
+            alert("正在提交中，请勿操作！");
+            return;
+        }
         if(!this.state.code.state){
             return;
         }
@@ -377,8 +377,8 @@ class GetMobileMessage extends Component {
                         errorText={this.state.error.password}
                         onChange={(e) => this.inputChange('password', e.currentTarget.value)} />
                 </FormBlock>
-                {!this.props.static && <FlatButton label={this.state.action.chinese} onClick={this.action}/>}
-                { !this.state.input.dialog && <div className="zIndex1" style={{position: "absolute", left: 0, top: 0, height: "100%", width: "100%",background: "#fff"}}>
+                {!this.props.buttonState && <FlatButton label={this.state.action.chinese} onClick={this.action}/>}
+                {this.state.input.dialog && <div className="zIndex1" style={{position: "absolute", left: 0, top: 0, height: "100%", width: "100%",background: "#fff"}}>
                     {this.state.src && <img src={`data:image/png;base64,${this.state.src}`} />}
                     <FormBlock tip='验证码'>
                         <Input

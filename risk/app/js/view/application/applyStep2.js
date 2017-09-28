@@ -525,7 +525,7 @@ class ApplyStep2 extends Component {
                     mobile = {this.state.value.Mobile}
                     password = {this.state.value.MobilePwd}
                     inputChange = {this.inputChange}
-                    static = {this.props.static}
+                    buttonState = {this.props.static}
                     />
                 {!this.props.static && <div>
                     <FlatButton
