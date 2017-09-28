@@ -128,6 +128,16 @@ const inputCode = (callback) => {
     runRequest(inter.InputCode, (data) => callback(data));
 }
 
+const getCode = (callback) => {
+    let _value = getValue();
+    if(!_value){
+        return false;
+    }
+    inter.getCode.data.token = _value.Token;
+
+    runRequest(inter.getCode, (data) => callback(data));
+}
+
 const getTaskState = (callback) => {
     let _value = getValue();
     if(!_value){
@@ -233,6 +243,8 @@ export {
     //提交修改人信息
     postEditUserMessage,
     //生成后修改日期
-    changeTimeAfterSet
+    changeTimeAfterSet,
+    //获取验证码
+    getCode
 }
 /* jshint ignore: end */

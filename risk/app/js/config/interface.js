@@ -905,6 +905,15 @@ const inter = {
             "contarctId": "string"
         },
         "callback":{}
+    },
+    "getCode":{
+        "Chinese":"发送验证码",
+        "url": "/api/Mobile/GetVerifyCode",
+        "type":"get",
+        "data": {
+            "token": "",//string
+            "id": ""//string
+        }
     }
 }
 

@@ -26,7 +26,7 @@ module.exports = {
         "bundle": `./${path}/app/js/view.js`
     }, //入口
     output: {
-        path: `/users/liuzeyu/views/${path}/`, //输出
+        path: `/users/liuzeyu/project/view/${path}/`, //输出
         filename: `[name].${path}.js`
     },
     module: {

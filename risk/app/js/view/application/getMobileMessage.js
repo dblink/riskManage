@@ -4,7 +4,7 @@ import {inter} from '../../config/interface';
 import {MaterialFlatButton as FlatButton} from '../../module/buttons';
 import {MaterialTextField as Input} from '../../module/input/input';
 import {FormBlock} from '../../module/form/formBlock';
-import {createTaskList, inputCode, getTaskState, getUserMessage} from '../../config/applyConfig';
+import {createTaskList, inputCode, getCode, getTaskState, getUserMessage} from '../../config/applyConfig';
 
 class GetMobileMessage extends Component {
     constructor(props) {
@@ -18,6 +18,11 @@ class GetMobileMessage extends Component {
             },
             inputCode:{
                 code: ""
+            },
+            code:{
+                state:true,
+                chinese: "未收到验证码？",
+                times: 60
             },
             error: {
                 password: "",
@@ -41,9 +46,10 @@ class GetMobileMessage extends Component {
         this.action = this.action.bind(this);
         this.createTaskCallBack = this.createTaskCallBack.bind(this);
         this.sendInput = this.sendInput.bind(this);
+        this.getCode = this.getCode.bind(this);
+        this.startCountDown = this.startCountDown.bind(this);
     }
     action(e) {
-
         //如果state为false,无法再次请求
         if(!this.state.action.state){
             return;
@@ -205,7 +211,6 @@ class GetMobileMessage extends Component {
         if(!this.state.input.state){
             return;
         }
-
         inter.InputCode.data.code = this.state.inputCode.code;
         let _input = this.state.input;
         _input.state = false;
@@ -234,6 +239,56 @@ class GetMobileMessage extends Component {
                 
             }); //callback 判断
         })
+    }
+
+    getCode(){ //发送验证码
+        // if(!this.state.input.state){
+        //     alert("正在提交中，请勿操作！");
+        //     return;
+        // }
+        if(!this.state.code.state){
+            return;
+        }
+        let _code = this.state.code;
+        _code.state = false;
+        this.setState({
+            code: _code
+        }, ()=>{
+            //发送验证码
+            inter.getCode.data.id = inter.GetTaskState.data.id;
+            getCode((data)=>{
+                if(data.error){
+                    alert(data.error);
+                    return;
+                }
+                this.startCountDown();
+            })
+        })
+    }
+
+    startCountDown(){
+        let that = this;
+        setTimeout(function() {
+            let _code = that.state.code;
+            let _time = "";
+            if(_code.times.toString() === "1"){
+                _code.times = 60;
+                _code.chinese = "未收到验证码？";
+                _code.state = true;
+                that.setState({
+                    code: _code
+                })
+            }else{
+                _time = _code.times - 1;
+                _code.times = _time;
+                _code.chinese = _time;
+                that.setState({
+                    code: _code
+                }, ()=>{
+                    that.startCountDown()
+                });
+            }
+        }, 1000);
     }
 
     judge(list){
@@ -273,6 +328,8 @@ class GetMobileMessage extends Component {
             error: _error
         })
     }
+
+    
 
     render() {
         return (
@@ -321,7 +378,7 @@ class GetMobileMessage extends Component {
                         onChange={(e) => this.inputChange('password', e.currentTarget.value)} />
                 </FormBlock>
                 {!this.props.static && <FlatButton label={this.state.action.chinese} onClick={this.action}/>}
-                { this.state.input.dialog && <div className="zIndex1" style={{position: "absolute", left: 0, top: 0, height: "100%", width: "100%",background: "#fff"}}>
+                { !this.state.input.dialog && <div className="zIndex1" style={{position: "absolute", left: 0, top: 0, height: "100%", width: "100%",background: "#fff"}}>
                     {this.state.src && <img src={`data:image/png;base64,${this.state.src}`} />}
                     <FormBlock tip='验证码'>
                         <Input
@@ -334,6 +391,7 @@ class GetMobileMessage extends Component {
                             onChange={(e) => this.inputChange('code', e.currentTarget.value, "inputCode")} />
                     </FormBlock>
                     <FlatButton label={this.state.input.chinese} onClick={this.sendInput}/>
+                    <FlatButton label={this.state.code.chinese} onClick={this.getCode} />
                 </div>}
             </div>
         );

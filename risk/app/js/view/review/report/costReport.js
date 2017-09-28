@@ -4,13 +4,14 @@ import {BlockTwo, BlockThree, FullWidth} from './reportModule';
 
 class CostReport extends Component {
     render() {
+        let _props = this.props;
         return (
             <div>
                 <div
                     className="container letter-spacing-normal white-color text-center report-title red-bg offset-top-20">
                     消费分析
                 </div>
-                <FullWidth title={"账单最新认证时间"}>
+                <FullWidth title="账单最新认证时间">
                     {_props.consumption_analysis.bill_latest_certification_day}
                 </FullWidth>
                 <BlockTwo title={"最近3月消费总额(元)"} info={(_props.consumption_analysis.total_fee_3m / 100).toFixed(2)} />

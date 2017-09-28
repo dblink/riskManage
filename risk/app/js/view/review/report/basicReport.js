@@ -158,8 +158,8 @@ class BasicInfo extends Component {
                         <div className="layer width-10 report-nav text-right">身份证</div>
                         <div className="layer width-60 report-content">
                             <div className="layer">{_props.userMessage.PersonCardNo}</div>
-                            <div className={`layer ${_isNameAndCardCourt ? "success-bg-color" : "wrong-bg-color"} report-tip`}>{_isNameAndCardCourt && "不"}在法院名单</div>
-                            <div className={`layer ${_isNameAndCardFinance ? "success-bg-color" : "wrong-bg-color"} report-tip`}>{_isNameAndCardFinance && "不"}在金融机构黑名单</div>
+                            <div className={`layer ${!_isNameAndCardCourt ? "success-bg-color" : "wrong-bg-color"} report-tip`}>{!_isNameAndCardCourt && "不"}在法院名单</div>
+                            <div className={`layer ${!_isNameAndCardFinance ? "success-bg-color" : "wrong-bg-color"} report-tip`}>{!_isNameAndCardFinance && "不"}在金融机构黑名单</div>
                         </div>
                         <div className="layer width-30 report-content">
                             <span
@@ -182,7 +182,7 @@ class BasicInfo extends Component {
                         <div className="layer width-10 report-nav text-right vertical-top">手机号</div>
                         <div className="layer width-60 report-content vertical-top">
                             <div className="layer">{_props.userMessage.Mobile}</div>
-                            {<div className={`layer ${_isNameAndMobileFinance ? "success-bg-color" : "wrong-bg-color"} report-tip`}>{_isNameAndMobileFinance && "不"}在金融机构黑名单</div>}
+                            {<div className={`layer ${!_isNameAndMobileFinance ? "success-bg-color" : "wrong-bg-color"} report-tip`}>{!_isNameAndMobileFinance && "不"}在金融机构黑名单</div>}
                             <div className="report-little_tip">
                                 <p className={_isNameTrue}>用户姓名与运营商提供的姓名[{_props.user_basic_info.name}]{_props.basic_info_check_items.name_match}</p>
                                 <p className={_isCardIdTrue}>用户身份证[{_props.basic_info_check_items.idcard_match}]</p>
